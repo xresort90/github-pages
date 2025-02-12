@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Resort</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero-cta {
+      color: red;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero-cta:hover {
+      color: white;
+      background-color: red;
+    }
+
+    .cta-button {
+      color: white;
+      background-color: red;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .cta-button:hover {
+      background-color: darkred;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .contact-info div {
+      display: flex;
+      gap: 15px;
+    }
+
+    .contact-info a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Styles for the menu section */
+    #menu {
+      padding: 40px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    #menu img {
+      width: 100%;  /* Adjust the image size */
+      max-width: 600px;  /* Max size */
+      height: auto;
+      margin: 20px 0;
+    }
+
+    /* Booking Form Section */
+    #book-now {
+      padding: 40px;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .booking-form input, .booking-form select {
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+    }
+
+    .booking-form button {
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .booking-form button:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">X Resort</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#accommodation">Accommodations</a></li>
+        <li><a href="#dining">Dining</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contact Info Section -->
+    <div class="contact-info">
+      <div>
+        <a href="tel: +9857073158">📞 +977 9857073158</a>
+        <a href="mail to: xresort90@gmail.com">📧 xresort90@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Welcome to X Resort</h1>
+        <p>Experience the Taste of Perfection.</p>
+        <!-- "Explore Our Menu" stays unchanged -->
+        <a href="#menu" class="hero-cta">Explore Our Menu</a>
+        <!-- New "Book Now" button -->
+        <a href="#book-now" class="cta-button">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <p>Browse through our delectable offerings:</p>
+    <img src="your-image.jpg" alt="Delicious dish" />
+    <p>Explore our wide variety of gourmet dishes, handpicked for your enjoyment.</p>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="book-now" class="booking-form">
+    <h2>Make Your Booking</h2>
+    <form action="/submit-booking" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <input type="date" name="date" required><br>
+      <select name="room-type" required>
+        <option value="single">Single Room</option>
+        <option value="double">Double Room</option>
+        <option value="suite">Suite</option>
+      </select><br>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+</body>
+</html>
